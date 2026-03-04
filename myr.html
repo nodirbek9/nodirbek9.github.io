@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>My Diplom Project</title>
+    <link rel="stylesheet" href="myrf.css">
+    <meta name="description" content="Diploma project starter page" />
+    <style>
+        :root{
+            --bg:#f6f8fb; --card:#ffffff; --accent:#2563eb; --muted:#6b7280;
+            --radius:10px; --maxw:1100px;
+        }
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+            margin:0;
+            font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background:linear-gradient(180deg,#f8fafc, #eef2ff 60%);
+            color:#0f172a;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+            line-height:1.45;
+        }
+        .wrap{max-width:var(--maxw);margin:28px auto;padding:20px}
+        header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+        .brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit}
+        .logo{
+            width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);
+            display:inline-grid;place-items:center;color:#fff;font-weight:700;font-size:18px;
+            box-shadow:0 6px 18px rgba(37,99,235,.12);
+        }
+        nav{display:flex;gap:12px;align-items:center}
+        a.button{
+            padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--accent);border:1px solid rgba(37,99,235,.12);background:#fff;font-weight:600;font-size:14px
+        }
+        main{display:grid;gap:18px}
+        .hero{
+            background:linear-gradient(90deg,rgba(37,99,235,.06),rgba(124,58,237,.04));
+            padding:28px;border-radius:var(--radius);
+            display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:center;
+            box-shadow:0 6px 30px rgba(15,23,42,.04);
+        }
+        .hero h1{margin:0 0 8px;font-size:28px}
+        .hero p{margin:0;color:var(--muted)}
+        .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,.04)}
+        .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+        .feature{padding:14px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid rgba(2,6,23,.03)}
+        .feature h4{margin:0 0 6px;font-size:15px}
+        .muted{color:var(--muted);font-size:14px}
+        form{display:grid;gap:10px}
+        label{font-size:13px;color:var(--muted)}
+        input[type="text"], input[type="email"], textarea{
+            width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef8;background:#fff;font-size:14px;
+        }
+        textarea{min-height:100px;resize:vertical}
+        .row{display:flex;gap:10px}
+        footer{margin-top:6px;text-align:center;color:var(--muted);font-size:13px}
+        @media (max-width:880px){
+            .hero{grid-template-columns:1fr; text-align:left}
+            .grid{grid-template-columns:repeat(2,1fr)}
+        }
+        @media (max-width:520px){
+            .grid{grid-template-columns:1fr}
+            nav{display:none}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <a class="brand" href="#">
+                <div class="logo">MD</div>
+                <div>
+                    <strong>MyDiplom</strong>
+                    <div class="muted" style="font-size:13px">Project prototype</div>
+                </div>
+            </a>
+            <nav>
+                <a class="button" href="#project">Project</a>
+                <a class="button" href="#features">Features</a>
+                <a class="button" href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero card" id="project">
+                <div>
+                    <h1>Project Title — My Diploma</h1>
+                    <p>A short one-line summary that communicates the goal of the diploma project. Replace this text with your abstract.</p>
+                    <div style="margin-top:14px;display:flex;gap:10px">
+                        <a class="button" href="#features">Learn more</a>
+                        <a class="button" href="#contact" style="background:var(--accent);color:#fff;border:0">Get in touch</a>
+                    </div>
+                </div>
+                <aside class="card" style="text-align:left">
+                    <h3 style="margin-top:0">Project at a glance</h3>
+                    <ul style="padding-left:18px;margin:8px 0;color:var(--muted)">
+                        <li>Supervisor: Dr. Example</li>
+                        <li>Duration: 6 months</li>
+                        <li>Technologies: HTML, CSS, JS</li>
+                    </ul>
+                    <div class="muted" style="font-size:13px">Status: In progress</div>
+                </aside>
+            </section>
+
+            <section id="features" class="card">
+                <h2 style="margin-top:0">Key features</h2>
+                <div class="grid" style="margin-top:12px">
+                    <div class="feature">
+                        <h4>Responsive UI</h4>
+                        <div class="muted">Clean layout that works across devices.</div>
+                    </div>
+                    <div class="feature">
+                        <h4>Modular code</h4>
+                        <div class="muted">Organized HTML and reusable components.</div>
+                    </div>
+                    <div class="feature">
+                        <h4>Easy to extend</h4>
+                        <div class="muted">Start small and grow features as needed.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card" id="contact">
+                <h2 style="margin-top:0">Contact / Notes</h2>
+                <form id="contactForm" novalidate>
+                    <div class="row">
+                        <div style="flex:1">
+                            <label for="name">Name</label>
+                            <input id="name" name="name" type="text" placeholder="Your name" required />
+                        </div>
+                        <div style="width:260px">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+                        </div>
+                    </div>
+                    <label for="message">Message / Notes</label>
+                    <textarea id="message" name="message" placeholder="Short note about the project"></textarea>
+                    <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:6px">
+                        <button type="reset" style="padding:10px 14px;border-radius:8px;border:1px solid #e6eef8;background:#fff">Reset</button>
+                        <button type="submit" style="padding:10px 14px;border-radius:8px;border:0;background:var(--accent);color:#fff">Send</button>
+                    </div>
+                    <div id="formStatus" class="muted" style="margin-top:8px;display:none"></div>
+                </form>
+            </section>
+
+            <footer>
+                <div>© <span id="year"></span> MyDiplom — Template</div>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        // Small helpers for the local prototype
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const form = document.getElementById('contactForm');
+        const status = document.getElementById('formStatus');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Basic validation
+            const name = form.name.value.trim();
+            const email = form.email.value.trim();
+            if (!name || !email) {
+                status.style.display = 'block';
+                status.textContent = 'Please provide a name and an email.';
+                return;
+            }
+            // This is a local template: replace with actual submit logic.
+            status.style.display = 'block';
+            status.textContent = 'Thanks — your note was recorded locally.';
+            console.log('Contact form data:', { name, email, message: form.message.value.trim() });
+            form.reset();
+        });
+    </script>
+</body>
+</html>
